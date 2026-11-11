@@ -14,7 +14,7 @@
 
 ## US-02: Button component
 
-**As a** frontend engineer, **I want** a Button with primary, secondary and tertiary variants, **so that** I can add consistent actions to any screen.
+**As a** frontend engineer, **I want** a Button with primary, secondary, ghost and danger`, **so that** I can add consistent actions to any screen.
 
 **Acceptance criteria**
 
