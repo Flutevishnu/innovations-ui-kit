@@ -1,0 +1,15 @@
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 6px;
+    color: var(--gray-0);
+    cursor: pointer;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn-outline {
+    border: 1px solid #C9CED6;
+  }
