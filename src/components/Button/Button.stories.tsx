@@ -48,6 +48,7 @@ export const FocusVisible: Story = {
   },
 };
 
-// TODO(docs/ux-handoff.md): Hover and Active stories need a pseudo-state addon
-// (for example storybook-addon-pseudo-states), which is not installed. Adding
-// a dependency needs approval, so these two states have no story yet.
+// Hover and Active are forced with storybook-addon-pseudo-states. Only primary
+// changes today; see TODO(docs/ux-handoff.md Q3) in Button.module.css.
+export const Hover: Story = { parameters: { pseudo: { hover: true } } };
+export const Active: Story = { parameters: { pseudo: { active: true } } };

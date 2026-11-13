@@ -4,6 +4,7 @@
   justify-content: center;
   gap: var(--space-2);
   box-sizing: border-box;
+  /* TODO(docs/ux-handoff.md): border width is not in the UX spec; 1px assumed. */
   border: var(--border-width) solid transparent;
   border-radius: var(--radius-md);
   font-family: var(--font-family);
@@ -34,6 +35,8 @@
 
 .primary {
   background-color: var(--color-action-primary);
+  /* TODO(docs/ux-handoff.md): the spec has no text colour for filled buttons;
+     white is assumed. Same for .danger below. */
   color: var(--color-text-on-action);
 }
 
@@ -64,7 +67,8 @@
   color: var(--color-text-on-action);
 }
 
-/* Sizes */
+/* Sizes. Heights come from the UX spec (32/40/48px); the token names are ours.
+   See TODO(docs/ux-handoff.md) in semantic.css. */
 
 .sm {
   min-height: var(--size-control-sm);

@@ -75,15 +75,16 @@
   --focus-ring-offset: 2px;
   --opacity-disabled: 0.4;
 
-  /* TODO(docs/ux-handoff.md): not in the UX spec's token list. Control heights
-     for Button sm/md/lg (32/40/48px); reused by form controls. Pending UX
-     confirmation. */
+  /* TODO(docs/ux-handoff.md): the heights (32/40/48px) are in the UX spec, but
+     the spec gives no token names for them. These names are ours; confirm them
+     with UX. */
   --size-control-sm: 32px;
   --size-control-md: 40px;
   --size-control-lg: 48px;
 
-  /* TODO(docs/ux-handoff.md): not in the UX spec. Default border width for
-     controls; 1px assumed. Pending UX confirmation. */
+  /* TODO(docs/ux-handoff.md): the UX spec gives no border width (the 2px in the
+     spec is the focus ring, not a border). 1px is an assumption; confirm with
+     UX. */
   --border-width: 1px;
 }
 
