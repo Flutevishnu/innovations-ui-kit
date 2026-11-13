@@ -28,12 +28,19 @@ describe('Button', () => {
 
   it.each(variants)('renders the %s variant', (variant) => {
     render(<Button variant={variant}>Save changes</Button>);
-    expect(screen.getByRole('button', { name: 'Save changes' })).toBeEnabled();
+    expect(screen.getByRole('button', { name: 'Save changes' })).toHaveAttribute('data-variant', variant);
   });
 
   it.each(sizes)('renders the %s size', (size) => {
     render(<Button size={size}>Save changes</Button>);
-    expect(screen.getByRole('button', { name: 'Save changes' })).toBeEnabled();
+    expect(screen.getByRole('button', { name: 'Save changes' })).toHaveAttribute('data-size', size);
+  });
+
+  it('defaults to the primary variant and md size', () => {
+    render(<Button>Save changes</Button>);
+    const button = screen.getByRole('button', { name: 'Save changes' });
+    expect(button).toHaveAttribute('data-variant', 'primary');
+    expect(button).toHaveAttribute('data-size', 'md');
   });
 
   it('defaults to type="button" so it does not submit a form by accident', async () => {
