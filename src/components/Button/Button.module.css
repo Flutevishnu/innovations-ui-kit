@@ -1,0 +1,110 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  box-sizing: border-box;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: var(--font-label-size);
+  line-height: var(--font-label-line-height);
+  font-weight: var(--font-label-weight);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--easing-standard);
+}
+
+.button:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* TODO(docs/ux-handoff.md Q16): disabled uses 40% opacity per the spec; some
+   colour pairs will fail contrast. Awaiting UX decision on dedicated tokens. */
+.button:disabled {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+}
+
+.button[aria-busy='true'] {
+  cursor: progress;
+}
+
+/* Variants */
+
+.primary {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-on-action);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+}
+
+.primary:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+/* TODO(docs/ux-handoff.md Q3): the spec gives hover and active colours for
+   primary only. Secondary, ghost and danger have no hover or active styles
+   until UX answers. The base colours below are also not specified. */
+.secondary {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-border-default);
+  color: var(--color-text-primary);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+.danger {
+  background-color: var(--color-status-danger-fg);
+  color: var(--color-text-on-action);
+}
+
+/* Sizes */
+
+.sm {
+  min-height: var(--size-control-sm);
+  padding-inline: var(--space-3);
+}
+
+.md {
+  min-height: var(--size-control-md);
+  padding-inline: var(--space-4);
+}
+
+.lg {
+  min-height: var(--size-control-lg);
+  padding-inline: var(--space-5);
+}
+
+/* Icon and spinner */
+
+.icon {
+  display: inline-flex;
+}
+
+.spinner {
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--focus-ring-width) solid currentcolor;
+  border-inline-end-color: transparent;
+  border-radius: var(--radius-pill);
+  animation: spin calc(var(--duration-base) * 4) linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}

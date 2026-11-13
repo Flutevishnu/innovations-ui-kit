@@ -81,6 +81,10 @@
   --size-control-sm: 32px;
   --size-control-md: 40px;
   --size-control-lg: 48px;
+
+  /* TODO(docs/ux-handoff.md): not in the UX spec. Default border width for
+     controls; 1px assumed. Pending UX confirmation. */
+  --border-width: 1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

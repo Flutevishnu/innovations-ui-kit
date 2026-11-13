@@ -18,7 +18,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    passWithNoTests: true,
     exclude: [...configDefaults.exclude, '.claude/**'],
     setupFiles: ['./src/test-setup.ts'],
     css: { modules: { classNameStrategy: 'non-scoped' } },
