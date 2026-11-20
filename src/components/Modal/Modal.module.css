@@ -1,0 +1,106 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--space-4);
+  background-color: var(--color-bg-overlay);
+  font-family: var(--font-family);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-3);
+  color: var(--color-text-primary);
+}
+
+.sm {
+  max-width: var(--size-modal-sm);
+}
+
+.md {
+  max-width: var(--size-modal-md);
+}
+
+.lg {
+  max-width: var(--size-modal-lg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-width) solid var(--color-border-default);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-title-size);
+  line-height: var(--font-title-line-height);
+  font-weight: var(--font-title-weight);
+}
+
+.close {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-body-size);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--color-text-primary);
+}
+
+.close:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: var(--space-5);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border-top: var(--border-width) solid var(--color-border-default);
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    padding: 0;
+  }
+
+  .overlay .panel {
+    max-width: none;
+    height: 100%;
+    border-radius: 0;
+  }
+}

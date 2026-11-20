@@ -1,6 +1,7 @@
 export const color = {
   bgCanvas: 'var(--color-bg-canvas)',
   bgSurface: 'var(--color-bg-surface)',
+  bgOverlay: 'var(--color-bg-overlay)',
   textPrimary: 'var(--color-text-primary)',
   textSecondary: 'var(--color-text-secondary)',
   textOnAction: 'var(--color-text-on-action)',
@@ -115,3 +116,11 @@ export const controlSizes = {
 export type ControlSize = keyof typeof controlSizes;
 
 export const checkboxSize = 'var(--size-checkbox)';
+
+export const modalSizes = {
+  sm: 'var(--size-modal-sm)',
+  md: 'var(--size-modal-md)',
+  lg: 'var(--size-modal-lg)',
+} as const;
+
+export const zIndexModal = 'var(--z-index-modal)';

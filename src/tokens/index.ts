@@ -11,6 +11,8 @@ export {
   interaction,
   controlSizes,
   checkboxSize,
+  modalSizes,
+  zIndexModal,
 } from './tokens';
 export type {
   Color,
