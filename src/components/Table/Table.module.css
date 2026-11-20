@@ -1,0 +1,107 @@
+.region {
+  overflow-x: auto;
+  border: var(--border-width) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+  font-family: var(--font-family);
+}
+
+.region:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-text-primary);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: var(--border-width);
+  height: var(--border-width);
+  margin: calc(var(--border-width) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.header {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border-default);
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-secondary);
+  font-size: var(--font-label-size);
+  line-height: var(--font-label-line-height);
+  font-weight: var(--font-label-weight);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sortButton:hover {
+  color: var(--color-text-primary);
+}
+
+.sortButton:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.sortIcon {
+  color: var(--color-text-secondary);
+}
+
+.header[aria-sort='ascending'] .sortIcon,
+.header[aria-sort='descending'] .sortIcon {
+  color: var(--color-action-primary);
+}
+
+.cell {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border-default);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+}
+
+.selectCell {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border-default);
+  white-space: nowrap;
+}
+
+thead .selectCell {
+  background-color: var(--color-bg-canvas);
+}
+
+tbody tr:last-child .cell,
+tbody tr:last-child .selectCell {
+  border-bottom: 0;
+}
+
+tr[data-selected='true'] .cell,
+tr[data-selected='true'] .selectCell {
+  background-color: var(--color-status-info-bg);
+}
+
+.empty {
+  padding: var(--space-6) var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  text-align: center;
+}
