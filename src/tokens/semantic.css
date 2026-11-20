@@ -17,6 +17,8 @@
   --color-status-warning-fg: var(--amber-600);
   --color-status-danger-bg: var(--red-100);
   --color-status-danger-fg: var(--red-600);
+  --color-status-info-bg: var(--blue-100);
+  --color-status-info-fg: var(--blue-600);
 
   /* TODO(docs/ux-handoff.md): not in the UX spec. Text colour on filled action
      backgrounds (primary, danger); gray-0 assumed. Pending UX confirmation. */
@@ -81,6 +83,7 @@
   --size-control-sm: 32px;
   --size-control-md: 40px;
   --size-control-lg: 48px;
+  --size-checkbox: 20px;
 
   /* TODO(docs/ux-handoff.md): the UX spec gives no border width (the 2px in the
      spec is the focus ring, not a border). 1px is an assumption; confirm with

@@ -31,7 +31,7 @@ docs/                  # product, UX and planning docs
 
 ## Conventions
 - **Components:** function components, PascalCase folder and file names, named exports only (no default exports).
-- **Props:** export a `<Component>Props` interface; extend native element props where it fits (e.g. `ButtonHTMLAttributes`); forward refs on interactive components.
+- **Props:** export a `<Component>Props` interface; extend native element props where it fits (e.g. `ButtonHTMLAttributes`); expose `ref` on interactive components as a regular prop (`ref?: Ref<HTMLElement>` in the props interface, React 19); do not use `forwardRef`.
 - **TypeScript:** strict mode; no `any`, no non-null assertions (`!`) without a comment explaining why.
 - **Styling:** CSS Modules. Use semantic tokens only (`var(--color-action-primary)`, `var(--space-4)`); never hard-code hex colours, pixel spacing, font sizes or shadows, and never use primitive tokens (`blue-500`) inside components. This keeps a future dark theme possible without changing components.
 - **Variants and sizes:** use the exact names from the UX spec (`primary`, `secondary`, `ghost`, `danger`; `sm`, `md`, `lg`).

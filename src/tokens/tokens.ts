@@ -15,6 +15,8 @@ export const color = {
   statusWarningFg: 'var(--color-status-warning-fg)',
   statusDangerBg: 'var(--color-status-danger-bg)',
   statusDangerFg: 'var(--color-status-danger-fg)',
+  statusInfoBg: 'var(--color-status-info-bg)',
+  statusInfoFg: 'var(--color-status-info-fg)',
 } as const;
 
 export type Color = keyof typeof color;
@@ -111,3 +113,5 @@ export const controlSizes = {
 } as const;
 
 export type ControlSize = keyof typeof controlSizes;
+
+export const checkboxSize = 'var(--size-checkbox)';

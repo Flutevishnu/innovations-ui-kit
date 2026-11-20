@@ -10,6 +10,7 @@ export {
   motion,
   interaction,
   controlSizes,
+  checkboxSize,
 } from './tokens';
 export type {
   Color,
