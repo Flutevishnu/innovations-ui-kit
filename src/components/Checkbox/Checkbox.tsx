@@ -11,6 +11,7 @@ import styles from './Checkbox.module.css';
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size'> {
   ref?: Ref<HTMLInputElement>;
   label: string;
+  hideLabel?: boolean;
   error?: string;
   indeterminate?: boolean;
 }
@@ -18,6 +19,7 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
 export function Checkbox({
   ref,
   label,
+  hideLabel = false,
   error,
   indeterminate = false,
   id: idProp,
@@ -59,7 +61,7 @@ export function Checkbox({
           aria-invalid={error ? true : undefined}
           aria-describedby={describedBy}
         />
-        <span className={styles.label}>{label}</span>
+        <span className={hideLabel ? `${styles.label} ${styles.visuallyHidden}` : styles.label}>{label}</span>
       </label>
       {error && (
         <p id={messageId} className={styles.error}>

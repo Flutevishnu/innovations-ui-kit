@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+  box-sizing: border-box;
+  border: var(--border-width) solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-1);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  transition: box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.card[data-clickable='true'] {
+  cursor: pointer;
+}
+
+.card[data-clickable='true']:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.card:has(.primary:focus-visible) {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-title-size);
+  line-height: var(--font-title-line-height);
+  font-weight: var(--font-title-weight);
+}
+
+.primary {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary:focus-visible {
+  outline: none;
+}
+
+.primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.body {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+}
+
+.header + .body {
+  padding-block-start: 0;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border-top: var(--border-width) solid var(--color-border-default);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

@@ -18,3 +18,7 @@ export { Tabs } from './components/Tabs';
 export type { TabItem, TabsProps } from './components/Tabs';
 export { Alert } from './components/Alert';
 export type { AlertProps, AlertTone } from './components/Alert';
+export { Card } from './components/Card';
+export type { CardProps } from './components/Card';
+export { Table } from './components/Table';
+export type { SortDirection, SortState, TableColumn, TableProps } from './components/Table';

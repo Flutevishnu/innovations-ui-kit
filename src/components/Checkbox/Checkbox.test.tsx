@@ -32,6 +32,11 @@ describe('Checkbox', () => {
     expect(screen.getByRole('checkbox', { name: 'Send me product updates' })).toBeChecked();
   });
 
+  it('keeps the accessible name when the label is visually hidden', () => {
+    render(<Checkbox label="Select row" hideLabel />);
+    expect(screen.getByRole('checkbox', { name: 'Select row' })).toBeInTheDocument();
+  });
+
   it('shows the indeterminate state', () => {
     render(<Checkbox label="Select all" indeterminate />);
     expect(screen.getByRole('checkbox', { name: 'Select all' })).toBePartiallyChecked();

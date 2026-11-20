@@ -29,6 +29,17 @@
   color: var(--color-text-primary);
 }
 
+.visuallyHidden {
+  position: absolute;
+  width: var(--border-width);
+  height: var(--border-width);
+  margin: calc(var(--border-width) * -1);
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .field[data-invalid='true'] .input {
   accent-color: var(--color-status-danger-fg);
   outline: var(--border-width) solid var(--color-status-danger-fg);
